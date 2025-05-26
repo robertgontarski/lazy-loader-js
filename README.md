@@ -12,6 +12,20 @@ LazyLoader is a utility class that uses the Intersection Observer API to efficie
 - Simple API for observing and unobserving elements
 - Efficient management of observers
 
+## Installation
+
+### Via jsDelivr CDN
+
+You can include LazyLoader directly from jsDelivr CDN:
+
+```html
+<!-- latest version -->
+<script src="https://cdn.jsdelivr.net/gh/robertgontarski/lazy-loader-js@master/lazyLoader.js"></script>
+
+<!-- minify version -->
+<script src="https://cdn.jsdelivr.net/gh/robertgontarski/lazy-loader-js@2bcf703daef729338d4d26beaa646e6129ea14f2/lazyLoader.min.js"></script>
+```
+
 ## Usage
 
 ### Basic Usage
@@ -26,7 +40,7 @@ lazyLoader.observe(
     (entry) => {
         // This callback is called when the element becomes visible
         console.log('Element is visible!', entry.target);
-        
+
         // Perform your lazy loading logic here
         entry.target.src = entry.target.dataset.src;
     },
